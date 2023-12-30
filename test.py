@@ -48,7 +48,7 @@ def create_jobs_dict():
         job['applicants'] = random.randint(0, 20)
         job_name = job['title']
         job_pay = price_optimisation(max_sal, min_sal, 7, int(job['applicants']))
-        job_pay = round(job_pay, 2)  # Round off to 2 decimal places
+        job_pay = int(job_pay) # Round off to int
         jobs_dict[job_name] = [job_pay, job['applicants']]
     return jobs_dict
 

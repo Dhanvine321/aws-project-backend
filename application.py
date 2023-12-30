@@ -3,9 +3,9 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import json     # To convert the dictionary to a JSON object
 from flask_cors import cross_origin
+import time
 
 # price optimisation function
-'''how this is gonna work is that the func will take in max sal and min sal and then adjust based on urgency and popularity of applicants and demand'''
 def price_optimisation(max_sal, min_sal, days_left, applicants_count):
     # max_sal and min_sal are the max and min salary that the employer is willing to pay
     # days_left is the number of days left for the job deadline
@@ -153,14 +153,26 @@ def delete_job():
         # If the key does not exist, return an error message
         return jsonify({"error": f"Key '{key_to_delete}' not found"}), 404
     
-@application.route('/price_optimisation', methods=['POST', 'OPTIONS'])
-@cross_origin(origins=['http://localhost:3000'], methods=['POST', 'OPTIONS'], allow_headers=['Content-Type']) # Replace with your actual origin
-def price_optimisation_api():
+@application.route('/price_optimisation', methods=['GET', 'OPTIONS'])
+@cross_origin(origins=['http://localhost:3000'], methods=['GET', 'OPTIONS'])
+def update_job_pay():
     if request.method == 'OPTIONS':
-    
-
         # Preflight request. Reply successfully:
         return '', 200
+    # get data from Jobs.json and feed into price_optimisation function to get pay and set pay in Jobs.json as that
+    # Get the data from the PUT request
+    with open('Jobs.json', 'r') as json_file:
+        data = json.load(json_file)
+    for job in data:
+        job['pay'] = price_optimisation(20, 10, 25, int(job['applicants']))
+        job['pay'] = str(round(job['pay'], 2))
+
+    # Write the updated data back to the file
+    with open('Jobs.json', 'w') as json_file:
+        json.dump(data, json_file)
+
+    # Return a success message
+    return jsonify({"message": "Pay in Jobs.json updated successfully"}), 200
 
 if __name__ == '__main__':
     application.run(debug=True)
