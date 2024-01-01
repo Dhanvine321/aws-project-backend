@@ -3,6 +3,8 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import json     # To convert the dictionary to a JSON object
 from flask_cors import cross_origin
+import sqlite3
+import scripts.read_tables as read_tables
 # Create a new Flask application
 app = Flask(__name__)
 CORS(app, origins=['http://localhost:3000'])
@@ -69,9 +71,8 @@ def delete_nurse():
 # send jobs.json data to frontend
 @app.route('/jobs')
 def jobs():
-    with open('Jobs.json') as json_file:
-        data = json.load(json_file)
-        return jsonify(data)
+     data = read_tables.get_table_data('Jobs')
+     return jsonify(data)
 
 # update jobs.json data from frontend
 @app.route('/add_jobs', methods=['POST', 'OPTIONS'])

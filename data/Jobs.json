@@ -1,0 +1,62 @@
+[
+  {
+    "JobID": 1,
+    "title": "Day Surgery",
+    "description": "General Medical & Surgical",
+    "roleDescription": "Provide safe and quality peri-operative nursing care for day surgery cases and other minor surgery cases.",
+    "keyResponsibilities": "To assess, plan, implement and evaluate peri-anesthesia nursing care for day surgery cases and other minor surgery cases.",
+    "requirements": "Minimum Diploma in Nursing or equivalent.\nCandidates with Advanced Diploma / Degree in Perioperative / Peri-anesthesia or equivalent.",
+    "applicants": "0",
+    "pay": "$18/hr",
+    "date": "05-01-2024",
+    "time": "8:00AM to 4:00PM"
+  },
+  {
+    "JobID": 2,
+    "title": "Night Surgery",
+    "description": "Night",
+    "roleDescription": "Minimum Diploma in Nursing or equivalent.\nCandidates with Advanced Diploma / Degree in Perioperative / Peri-anesthesia or equivalent.",
+    "keyResponsibilities": "Minimum Diploma in Nursing or equivalent.\nCandidates with Advanced Diploma / Degree in Perioperative / Peri-anesthesia or equivalent.",
+    "requirements": "Minimum Diploma in Nursing or equivalent.\nCandidates with Advanced Diploma / Degree in Perioperative / Peri-anesthesia or equivalent.",
+    "applicants": "0",
+    "pay": "$18/hr",
+    "date": "07-01-2024",
+    "time": "10:00PM to 6:00AM"
+  },
+  {
+    "JobID": 3,
+    "title": "Pediatric Nurse",
+    "description": "Pediatric Department",
+    "roleDescription": "Provide safe and quality nursing care for children and adolescents.",
+    "keyResponsibilities": "To assess, plan, implement and evaluate nursing care for pediatric patients.",
+    "requirements": "Minimum Diploma in Nursing or equivalent.\nCandidates with Advanced Diploma / Degree in Pediatric Nursing or equivalent.",
+    "applicants": "0",
+    "pay": "$18/hr",
+    "date": "04-01-2024",
+    "time": "9:00AM to 5:00PM"
+  },
+  {
+    "JobID": 4,
+    "title": "Oncology Nurse",
+    "description": "Oncology Department",
+    "roleDescription": "Provide safe and quality nursing care for cancer patients.",
+    "keyResponsibilities": "To assess, plan, implement and evaluate nursing care for oncology patients.",
+    "requirements": "Minimum Diploma in Nursing or equivalent.\nCandidates with Advanced Diploma / Degree in Oncology Nursing or equivalent.",
+    "applicants": "0",
+    "pay": "$20/hr",
+    "date": "08-01-2024",
+    "time": "10:00AM to 4:00PM"
+  },
+  {
+    "JobID": 5,
+    "title": "Cardiac Nurse",
+    "description": "Cardiology Department",
+    "roleDescription": "Provide safe and quality nursing care for patients with heart conditions.",
+    "keyResponsibilities": "To assess, plan, implement and evaluate nursing care for cardiac patients.",
+    "requirements": "Minimum Diploma in Nursing or equivalent.\nCandidates with Advanced Diploma / Degree in Cardiac Nursing or equivalent.",
+    "applicants": "0",
+    "pay": "$25/hr",
+    "date": "09-01-2024",
+    "time": "8:30AM to 4:30PM"
+  }
+]
